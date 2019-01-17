@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from . import component
 
 class InformationSystem(models.Model):
 
@@ -16,6 +17,7 @@ class InformationSystem(models.Model):
 	m_name = fields.Char(compute='_compute_name', string="Nom du SI", store=True)
 	m_company = fields.Many2one('res.partner', string='Société', required=True, domain="[('is_company','=',True)]")
 	m_company_name = fields.Char(related='m_company.name', store=False, readonly=True)
+	m_components = fields.Many2many('si.component' string="Composants du SI")
 	
 	@api.depends('m_company_name')
 	def _compute_name(self):
