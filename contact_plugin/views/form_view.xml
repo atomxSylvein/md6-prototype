@@ -17,13 +17,22 @@
 		</record>
 
 		<!-- IS FORM VIEW -->
-		<record id="view_ticket_form" model="ir.ui.view">
+		<record id="view_si_form" model="ir.ui.view">
             <field name="name">si.si.form</field>
             <field name="model">si.si</field>
             <field name="priority" eval="8"/>
             <field name="arch" type="xml">
                 <form>
                 	<sheet string="Système d'information">
+						<div class="oe_title" style="max-width:50%;float:left;">
+							<h2>
+								<field name="m_name" help="Nom du SI" style="margin-top:10px;"/>
+								<br/><br/>
+							</h2>
+						</div>
+						<group name="group_ffca75">
+							<field name="m_company"/>
+						</group>
                 	</sheet>
                 </form>
             </field>
