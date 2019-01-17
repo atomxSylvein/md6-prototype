@@ -13,5 +13,5 @@ class ContactPlugin(models.Model):
 	"""
 	
 	_inherit = 'res.partner'
-	m_prospect_type = fields.Selection([('suspect','Suspect'), ('prospect','Prospect'), ('customer','Client')], default='Suspect', string="Type de contact")
+	m_prospect_type = fields.Selection([('susp','Suspect'), ('pros','Prospect'), ('cust','Client')], default='Suspect', string="Type de contact")
 	m_SI = fields.Many2one('si.si', string="Système d'information")
