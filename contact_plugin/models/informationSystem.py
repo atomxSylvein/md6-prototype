@@ -23,4 +23,4 @@ class InformationSystem(models.Model):
 		"""
 		for SI in self:
 			if SI.m_company_name:
-				SI.m_name = ' - '.join(SI.m_company_name, 'SI')
+				SI.m_name = ' - '.join([SI.m_company_name, 'SI'])
