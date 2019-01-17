@@ -14,6 +14,8 @@ class Component(models.Model):
 	"""
 	
 	_name = 'si.component'
+	_description= "IS Component"
+
 	m_type = fields.Selection([("server","Serveur"), ("erp","ERP"), ("hypervisor", "Hyperviseur"), ("stock", "Stockage")], string="Élément du SI", required=True)
 	m_brand = fields.Char(string="Marque")
 	m_volume = fields.Integer(string="Volume")

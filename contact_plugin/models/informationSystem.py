@@ -14,6 +14,9 @@ class InformationSystem(models.Model):
 	"""
 	
 	_name = 'si.si'
+	_rec_name = 'm_name'
+	_description = "Information system"
+
 	m_name = fields.Char(compute='_compute_name', string="Nom du SI", store=True)
 	m_company = fields.Many2one('res.partner', string='Société', required=True, domain="[('is_company','=',True)]")
 	m_company_name = fields.Char(related='m_company.name', store=False, readonly=True)
