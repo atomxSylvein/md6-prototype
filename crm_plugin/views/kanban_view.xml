@@ -8,9 +8,10 @@
 			<field name="arch" type="xml">
 
 			<!-- match and extend form element here -->
-			<progressbar position="attributes">
-				<attribute name="invisible">1</attribute>
-			</progressbar>
+			<progressbar position="replace"/>
+			<field name="tag_ids" position="attributes">
+				<attribute name="widget">many2one_tags</attribute>
+			</field>
 
 			</field>
 		</record>
