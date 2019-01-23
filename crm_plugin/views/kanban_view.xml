@@ -8,10 +8,24 @@
 			<field name="arch" type="xml">
 
 			<!-- match and extend form element here -->
+			<kanban position="attributes">
+				<attribute name="group_create">false</attribute>
+			</kanban>
+			
 			<progressbar position="replace"/>
 			<field name="tag_ids" position="attributes">
-				<attribute name="widget">many2one_tags</attribute>
+				<attribute name="widget"></attribute>
 			</field>
+			<div class="o_kanban_record_bottom" position="replace"/>
+
+			<div class="text-muted o_kanban_record_subtitle" position="replace">
+				<field name="partner_id"/><br/>
+				<div class="text-muted o_kanban_record_subtitle">
+					<t t-if="record.planned_revenue.raw_value">
+						<field name="planned_revenue" widget="monetary" options="{'currency_field': 'company_currency'}"/>
+					</t>
+				</div>
+			</div>
 
 			</field>
 		</record>
