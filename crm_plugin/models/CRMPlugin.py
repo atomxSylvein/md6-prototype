@@ -12,7 +12,8 @@ class CRMPlugin(models.Model):
 	"""
 	
 	_inherit = 'crm.lead'
-	m_type = fields.Selection([('distribution','Distribution'), ('project','Projet')], default='distribution', string="Type d'opportunité")
+	#m_type = fields.Selection([('distribution','Distribution'), ('project','Projet')], default='distribution', string="Type d'opportunité")
+	tags_id = fields.Many2one('crm.lead.tag', string="Type de business")
 	partner_id = fields.Many2one(domain="[('company_type', '=', 'company')]")
 	m_contact = fields.Many2one('res.partner', domain="[('parent_id', '=', 'partner_id')]", string="Contact de la société")
 	m_maturity = fields.Selection([('month', 'Dans le mois'), ('quarter', 'Dans le trimestre'), ('ahead', 'En amon de phase')], default='month', string="Maturité de l'opportunité")

@@ -1,0 +1,18 @@
+<odoo>
+	<data>
+		<!-- KANBAN VIEW -->
+		<record id="view_crm_kanban_inherited" model="ir.ui.view">
+			<field name="name">CRM Kanban Extension</field>
+			<field name="model">crm.lead</field>
+			<field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+			<field name="arch" type="xml">
+
+			<!-- match and extend form element here -->
+			<progressbar position="attributes">
+				<attribute name="invisible">1</attribute>
+			</field>
+
+			</field>
+		</record>
+	</data>
+</odoo>
