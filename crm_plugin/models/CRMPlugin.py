@@ -19,5 +19,5 @@ class CRMPlugin(models.Model):
 	date_deadline = fields.Date(string="Date de fin de l'opportunité")
 	m_company_city = fields.Char(related='partner_id.city', string="Ville", store=False, readonly=True)
 	m_company_zip = fields.Char(related='partner_id.zip', string="Département", store=False, readonly=True)
-	m_estimated_revenue = fields.Monetary(string="Budget estimé")
+	m_estimated_revenue = fields.Monetary(string="Budget estimé", currency_field='company_currency')
 	m_lead_provider = fields.Many2one('res.partner', string="Fournisseur du lead")
