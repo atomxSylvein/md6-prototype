@@ -31,9 +31,9 @@
 							</h2>
 						</div>
 						<group name="group_1">
-							<field name="m_company"/>
+							<field name="m_company" placeholder="À quelle société ce SI appartient-il ?"/>
 						</group>
-						<group name="group_2">
+						<group name="group_2" attrs="{'invisible': [('m_company','=', False)]}">
 							<group name="group_2left" colspan="2" rowspan="2">
 								<group name="group_2left_server" string="Serveur">
 									<field name="m_server_brand"/>
