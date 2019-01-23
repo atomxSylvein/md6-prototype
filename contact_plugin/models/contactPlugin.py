@@ -5,7 +5,7 @@ from . import informationSystem
 
 class ContactPlugin(models.Model):
 
-	"""This class extends Project class and provides implements the projects statuses
+	"""This class extends Contact class and provides implements the IS & type of prospect
 	
 	Attributes:
 	    m_prospect_type (selection): A contact can be a suspect, prospect or customer
