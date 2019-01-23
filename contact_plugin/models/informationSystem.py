@@ -9,7 +9,19 @@ class InformationSystem(models.Model):
 	Attributes:
 	    m_company (many2one): Company to whom the IS belongs
 	    m_company_name (relative): Company name
+	    m_erp_birthday (date): ERP birthday
+	    m_erp_brand (str): ERP brand
+	    m_erp_volume (int): not used
+	    m_hypervisor_birthday (date): Hypervisor birthday
+	    m_hypervisor_brand (str): Hypervisor brand
+	    m_hypervisor_volume (int): Hypervisor volume
 	    m_name (str): Name of the IS
+	    m_server_birthday (date): Server birthday
+	    m_server_brand (str): Server brand
+	    m_server_volume (int): Server volume
+	    m_stockage_birthday (date): Stockage birthday
+	    m_stockage_brand (str): Stockage brand
+	    m_stockage_volume (int): Stockage volume
 	"""
 	
 	_name = 'si.si'
@@ -26,12 +38,11 @@ class InformationSystem(models.Model):
 	m_server_birthday = fields.Date(string="Date d'anniversaire")
 
 	m_erp_brand = fields.Char(string="Marque")
-	m_erp_volume = fields.Integer(string="Volume")
 	m_erp_birthday = fields.Date(string="Date d'anniversaire")
 
-	m_hyperviseur_brand = fields.Char(string="Marque")
-	m_hyperviseur_volume = fields.Integer(string="Volume")
-	m_hyperviseur_birthday = fields.Date(string="Date d'anniversaire")
+	m_hypervisor_brand = fields.Char(string="Marque")
+	m_hypervisor_volume = fields.Integer(string="Volume")
+	m_hypervisor_birthday = fields.Date(string="Date d'anniversaire")
 
 	m_stockage_brand = fields.Char(string="Marque")
 	m_stockage_volume = fields.Integer(string="Volume")
