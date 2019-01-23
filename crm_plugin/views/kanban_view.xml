@@ -10,7 +10,7 @@
 			<!-- match and extend form element here -->
 			<progressbar position="attributes">
 				<attribute name="invisible">1</attribute>
-			</field>
+			</progressbar>
 
 			</field>
 		</record>
