@@ -20,4 +20,4 @@ class ContactPlugin(models.Model):
 	@api.depends('company_type')
 	def _detect_customer(self):
 		for contact in self:
-			contact.customer = True if contact.company_type = 'company' else False
+			contact.customer = True if contact.company_type == 'company' else False
