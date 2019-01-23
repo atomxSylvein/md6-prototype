@@ -42,15 +42,14 @@
 								</group>
 								<group name="group_2left_erp" string="ERP">
 									<field name="m_erp_brand"/>
-									<field name="m_erp_volume"/>
 									<field name="m_erp_birthday"/>
 								</group>
 							</group>
 							<group name="group_2right" colspan="2" rowspan="2">
 								<group name="group_2right_hyp" string="Hyperviseur">
-									<field name="m_hyperviseur_brand"/>
-									<field name="m_hyperviseur_volume"/>
-									<field name="m_hyperviseur_birthday"/>
+									<field name="m_hypervisor_brand"/>
+									<field name="m_hypervisor_volume"/>
+									<field name="m_hypervisor_birthday"/>
 								</group>
 								<group name="group_2right_sto" string="Stockage">
 									<field name="m_stockage_brand"/>
