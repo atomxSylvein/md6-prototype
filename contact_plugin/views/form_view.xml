@@ -30,9 +30,34 @@
 								<br/><br/>
 							</h2>
 						</div>
-						<group name="group_ffca75">
+						<group name="group_1">
 							<field name="m_company"/>
-							<field name="m_components"/>
+						</group>
+						<group name="group_2" string="Composants">
+							<group name="group_2left" colspan="1" rowspan="2">
+								<group name="group_2left_server" string="Serveur">
+									<field name="m_server_brand"/>
+									<field name="m_server_volume"/>
+									<field name="m_server_birthday"/>
+								</group>
+								<group name="group_2left_erp" string="ERP">
+									<field name="m_erp_brand"/>
+									<field name="m_erp_volume"/>
+									<field name="m_erp_birthday"/>
+								</group>
+							</group>
+							<group name="group_2right" colspan="1" rowspan="2">
+								<group name="group_2right_hyp" string="Hyperviseur">
+									<field name="m_hyperviseur_brand"/>
+									<field name="m_hyperviseur_volume"/>
+									<field name="m_hyperviseur_birthday"/>
+								</group>
+								<group name="group_2right_sto" string="Stockage">
+									<field name="m_stockage_brand"/>
+									<field name="m_stockage_volume"/>
+									<field name="m_stockage_birthday"/>
+								</group>
+							</group>
 						</group>
                 	</sheet>
                 </form>

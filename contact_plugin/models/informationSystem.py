@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
-from . import component
 
 class InformationSystem(models.Model):
 
@@ -20,7 +19,23 @@ class InformationSystem(models.Model):
 	m_name = fields.Char(compute='_compute_name', string="Nom du SI", store=True)
 	m_company = fields.Many2one('res.partner', string='Société', required=True, domain="[('is_company','=',True)]")
 	m_company_name = fields.Char(related='m_company.name', store=False, readonly=True)
-	m_components = fields.Many2many('si.component', string="Composants du SI")
+	
+	#components
+	m_server_brand = fields.Char(string="Marque")
+	m_server_volume = fields.Integer(string="Volume")
+	m_server_birthday = fields.Date(string="Date d'anniversaire")
+
+	m_erp_brand = fields.Char(string="Marque")
+	m_erp_volume = fields.Integer(string="Volume")
+	m_erp_birthday = fields.Date(string="Date d'anniversaire")
+
+	m_hyperviseur_brand = fields.Char(string="Marque")
+	m_hyperviseur_volume = fields.Integer(string="Volume")
+	m_hyperviseur_birthday = fields.Date(string="Date d'anniversaire")
+
+	m_stockage_brand = fields.Char(string="Marque")
+	m_stockage_volume = fields.Integer(string="Volume")
+	m_stockage_birthday = fields.Date(string="Date d'anniversaire")
 	
 	@api.depends('m_company_name')
 	def _compute_name(self):
