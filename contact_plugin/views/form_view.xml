@@ -1,0 +1,68 @@
+<odoo>
+	<data>
+		<!-- CONTACT FORM VIEW -->
+		<record id="view_contact_form_inherited" model="ir.ui.view">
+			<field name="name">Contact Form Extension</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form"/>
+			<field name="arch" type="xml">
+
+			<!-- match and extend form element here -->
+			<field name="vat" position="after">
+				<field name="m_prospect_type" attrs="{'invisible': [('is_company','=', False)]}"/>
+				<field name="m_SI" attrs="{'invisible': [('is_company','=', False)]}"/>
+			</field>
+
+			</field>
+		</record>
+
+		<!-- IS FORM VIEW -->
+		<record id="view_si_form" model="ir.ui.view">
+            <field name="name">si.si.form</field>
+            <field name="model">si.si</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form>
+                	<sheet string="Système d'information">
+						<div class="oe_title" style="max-width:50%;float:left;">
+							<h2>
+								<field name="m_name" help="Nom du SI" style="margin-top:10px;"/>
+								<br/><br/>
+							</h2>
+						</div>
+						<group name="group_1">
+							<field name="m_company" placeholder="À quelle société ce SI appartient-il ?"/>
+						</group>
+						<group name="group_2" attrs="{'invisible': [('m_company','=', False)]}">
+							<group name="group_2left" colspan="2" rowspan="2">
+								<group name="group_2left_server" string="Serveur">
+									<field name="m_server_brand"/>
+									<field name="m_server_volume"/>
+									<field name="m_server_birthday"/>
+								</group>
+								<group name="group_2left_erp" string="ERP">
+									<field name="m_erp_brand"/>
+									<field name="m_erp_volume"/>
+									<field name="m_erp_birthday"/>
+								</group>
+							</group>
+							<group name="group_2right" colspan="2" rowspan="2">
+								<group name="group_2right_hyp" string="Hyperviseur">
+									<field name="m_hyperviseur_brand"/>
+									<field name="m_hyperviseur_volume"/>
+									<field name="m_hyperviseur_birthday"/>
+								</group>
+								<group name="group_2right_sto" string="Stockage">
+									<field name="m_stockage_brand"/>
+									<field name="m_stockage_volume"/>
+									<field name="m_stockage_birthday"/>
+								</group>
+							</group>
+						</group>
+                	</sheet>
+                </form>
+            </field>
+        </record>
+
+	</data>
+</odoo>
