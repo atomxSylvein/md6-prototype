@@ -57,7 +57,6 @@
                                         'default_state_id': state_id, 'default_zip': zip,
                                         'default_country_id': country_id,
                                         'default_function': function,
-                                        'default_phone': phone,
                                         'default_mobile': mobile,
                                         'default_user_id': user_id,
                                         'default_team_id': team_id,
@@ -69,8 +68,7 @@
                                     <field name="is_blacklisted" invisible="1"/>
                                     <field name="partner_is_blacklisted" invisible="1"/>
                                     <field name="partner_address_email" widget="email"/>
-                                    <field name="partner_address_phone" attrs="{'invisible': [('partner_address_phone', '==', False)]}" widget="phone" string="Phone"/>
-                                    <field name="phone" attrs="{'invisible': [('partner_address_phone', '!=', False)]}" widget="phone"/>
+                                    <field name="partner_address_phone" attrs="{'invisible': [('partner_address_phone', '==', False)]}" widget="phone"/>
                                 </group>
 
                                 <group name="proposition_group" string="Proposition">
