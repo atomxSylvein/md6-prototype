@@ -13,6 +13,7 @@ class CRMPlugin(models.Model):
 	m_type = fields.Selection([('distribution','Distribution'), ('project','Projet')], default='distribution', string="Type d'opportunité")
 	tags_id = fields.Many2many('crm.lead.tag', string="Type de business")
 	partner_id = fields.Many2one(domain="[('company_type', '=', 'company')]")
+	m_stage_probability = fields.Float(related='stage_id.probability', string="Probabilité", readonly=True, store=False)
 	m_company = fields.Many2one(related="partner_id")
 	m_company_name = fields.Char(related="partner_id.name")
 	m_contact = fields.Many2one('res.partner', string="Contact de la société")
