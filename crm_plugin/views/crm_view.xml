@@ -69,7 +69,7 @@
                                     <field name="is_blacklisted" invisible="1"/>
                                     <field name="partner_is_blacklisted" invisible="1"/>
                                     <field name="partner_address_email" widget="email"/>
-                                    <field name="partner_address_phone" attrs="{'invisible': [('partner_address_phone', '==', False)]}" readonly="1" widget="phone" string="Phone"/>
+                                    <field name="partner_address_phone" attrs="{'invisible': [('partner_address_phone', '==', False)]}" widget="phone" string="Phone"/>
                                     <field name="phone" attrs="{'invisible': [('partner_address_phone', '!=', False)]}" widget="phone"/>
                                 </group>
 
