@@ -10,9 +10,9 @@
                 <form position="replace">
                     <form string="Opportunities" class="o_opportunity_form">
                         <header>
-                            <button invisible="1" name="action_set_won_rainbowman" string="Mark Won" type="object" class="oe_highlight" attrs="{'invisible': ['|', ('active','=',False), ('probability', '=', 100)]}"/>
-                            <button invisible="1" name="189" string="Mark Lost" type="action" class="oe_highlight" context="{'default_lead_id': active_id}" attrs="{'invisible': [('active', '=', False),('probability', '&lt;', 100)]}"/>
-                            <button invisible="1" name="toggle_active" string="Restore" type="object" attrs="{'invisible': ['|', ('probability', '&gt;', 0), ('active', '=', True)]}"/>
+                            <!-- button name="action_set_won_rainbowman" string="Mark Won" type="object" class="oe_highlight" attrs="{'invisible': ['|', ('active','=',False), ('probability', '=', 100)]}"/>
+                            <button name="189" string="Mark Lost" type="action" class="oe_highlight" context="{'default_lead_id': active_id}" attrs="{'invisible': [('active', '=', False),('probability', '&lt;', 100)]}"/>
+                            <button name="toggle_active" string="Restore" type="object" attrs="{'invisible': ['|', ('probability', '&gt;', 0), ('active', '=', True)]}"/ -->
                             <field name="stage_id" widget="statusbar" options="{'clickable': '1', 'fold_field': 'fold'}" attrs="{'invisible': [('active', '=', False)]}"/>
                         </header>
                         <sheet>
@@ -26,7 +26,7 @@
                                     </div>
                                 </button>
                             </div>
-                            <div invisible="1" class="badge-pill badge-danger float-right" attrs="{'invisible': ['|', ('probability', '&gt;', 0), ('active', '=', True)]}">Lost</div>
+                            <!-- div invisible="1" class="badge-pill badge-danger float-right" attrs="{'invisible': ['|', ('probability', '&gt;', 0), ('active', '=', True)]}">Lost</div -->
                             <div class="badge-pill badge-success float-right" attrs="{'invisible': [('m_stage_probability', '&lt;', 100)]}">Won</div>
                             <div class="oe_title" style="margin-bottom:20px;">
                                 <label for="name" class="oe_edit_only"/>
