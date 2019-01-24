@@ -51,19 +51,24 @@
                             </div>
                             <group name="global_group">
                                 <group name="lead_information_group">
-                                    <field name="partner_id" widget="res_partner_many2one" string="Société cliente" domain="[('customer', '=', True)]" context="{'search_default_customer': 1,                                         'default_name': partner_name, 'default_street': street,                                         'default_street2': street2, 'default_city': city,                                         'default_state_id': state_id, 'default_zip': zip,                                         'default_country_id': country_id, 'default_function': function,                                         'default_phone': phone, 'default_mobile': mobile,                                         'default_email': email_from,                                         'default_user_id': user_id, 'default_team_id': team_id, 'default_website': website,                                         'show_vat': True,                                     }"/>
+                                    <field name="partner_id" widget="res_partner_many2one" string="Société cliente" domain="[('customer', '=', True)]" context="{'search_default_customer': 1,
+                                        'default_name': partner_name, 'default_street': street,
+                                        'default_street2': street2, 'default_city': city,
+                                        'default_state_id': state_id, 'default_zip': zip,
+                                        'default_country_id': country_id,
+                                        'default_function': function,
+                                        'default_phone': phone,
+                                        'default_mobile': mobile,
+                                        'default_user_id': user_id,
+                                        'default_team_id': team_id,
+                                        'default_website': website,
+                                        'show_vat': True,}"/>
                                     <field name="m_company_city"/>
                                     <field name="m_company_zip"/>
                                     <field name="m_contact" domain="[('parent_id', '=', partner_id)]"/>
                                     <field name="is_blacklisted" invisible="1"/>
                                     <field name="partner_is_blacklisted" invisible="1"/>
-                                    <label for="email_from" class="oe_inline"/>
-                                    <div class="o_row o_row_readonly">
-                                        <i class="fa fa-ban" style="color: red;" role="img" title="This email is blacklisted for mass mailing" aria-label="Blacklisted" attrs="{'invisible': ['|', ('is_blacklisted', '=', False), ('partner_address_email', '!=', False)]}" groups="base.group_user"/>
-                                        <field name="email_from" widget="email"/>
-                                        <i class="fa fa-ban" style="color: red;" role="img" title="This email is blacklisted for mass mailing" aria-label="Blacklisted" attrs="{'invisible': ['|', ('partner_is_blacklisted', '=', False), ('partner_address_email', '=', False)]}" groups="base.group_user"/>
-                                        <field name="partner_address_email" attrs="{'invisible': [('partner_address_email', '==', False)]}" widget="email" string="Email"/>
-                                    </div>
+                                    <field name="partner_address_email" widget="email"/>
                                     <field name="partner_address_phone" attrs="{'invisible': [('partner_address_phone', '==', False)]}" readonly="1" widget="phone" string="Phone"/>
                                     <field name="phone" attrs="{'invisible': [('partner_address_phone', '!=', False)]}" widget="phone"/>
                                 </group>

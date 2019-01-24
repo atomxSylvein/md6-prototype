@@ -14,9 +14,9 @@ class CRMPlugin(models.Model):
 	#modification of existing fields
 	tags_id = fields.Many2many('crm.lead.tag', string="Type de business")
 	partner_id = fields.Many2one(domain="[('company_type', '=', 'company')]")
-	email_from = fields.Char(related='m_contact.email', string="Email")
+	partner_address_email = fields.Char(related='m_contact.email', string="Email", readonly=True, store=False)
 	date_deadline = fields.Date(string="Date de fin de l'opportunité")
-	partner_address_phone = fields.Char(related='m_contact.phone', string="Numéro de tél.")
+	partner_address_phone = fields.Char(related='m_contact.phone', string="Numéro de tél.", readonly=True, store=False)
 
 	#new fields
 	m_type = fields.Selection([('distribution','Distribution'), ('project','Projet')], default='distribution', string="Type d'opportunité")
