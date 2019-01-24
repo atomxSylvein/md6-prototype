@@ -29,7 +29,7 @@
 			</field>
 		</record>
 
-		<!-- CRM TAG FORM VIEW - ->
+		<!-- CRM TAG FORM VIEW -->
 		<record id="view_crm_tag_form_inherited" model="ir.ui.view">
 			<field name="name">CRM Tag Form Extension</field>
 			<field name="model">crm.lead.tag</field>
@@ -43,7 +43,7 @@
 			</field>
 		</record>
 
-		<!- - CRM TAG LIST VIEW - ->
+		<!-- CRM TAG LIST VIEW -->
 		<record id="view_crm_tag_list_inherited" model="ir.ui.view">
 			<field name="name">CRM Tag List Extension</field>
 			<field name="model">crm.lead.tag</field>
@@ -55,6 +55,6 @@
 				</field>
 
 			</field>
-		</record -->
+		</record>
 	</data>
 </odoo>

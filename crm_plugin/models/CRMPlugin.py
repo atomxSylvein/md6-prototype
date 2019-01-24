@@ -21,10 +21,10 @@ class CRMPlugin(models.Model):
 	date_deadline = fields.Date(string="Date de fin de l'opportunité")
 	m_company_city = fields.Char(related='partner_id.city', string="Ville", store=False, readonly=True)
 	m_company_zip = fields.Char(related='partner_id.zip', string="Département", store=False, readonly=True)
-	"""m_estimated_revenue = fields.Monetary(string="Budget estimé", currency_field='company_currency')
+	m_estimated_revenue = fields.Monetary(string="Budget estimé", currency_field='company_currency')
 	m_buy = fields.Monetary(string="Prix d'achat", currency_field='company_currency')
 	m_sell = fields.Monetary(string="Prix de vente", currency_field='company_currency')
-	m_margin = fields.Monetary(string="Marge", readonly=True)
+	m_margin = fields.Monetary(string="Marge", currency_field='company_currency', readonly=True)
 	m_TJM = fields.Monetary(string="TJM", currency_field='company_currency')
 	m_package_price = fields.Monetary(string="Prix forfait", currency_field='company_currency')"""
 	
