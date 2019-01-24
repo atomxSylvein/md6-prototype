@@ -14,7 +14,7 @@ class CRMPlugin(models.Model):
 	tags_id = fields.Many2many('crm.lead.tag', string="Type de business")
 	partner_id = fields.Many2one(domain="[('company_type', '=', 'company')]")
 	m_company = fields.Many2one(related="partner_id", store=False)
-	m_contact = fields.Many2one('res.partner', domain="[('parent_name', '=', 'Azure Interior')]", string="Contact de la société")
+	m_contact = fields.Many2one('res.partner', string="Contact de la société")
 	m_lead_provider = fields.Many2one('res.partner', string="Fournisseur du lead")
 	m_maturity = fields.Selection([('month', 'Dans le mois'), ('quarter', 'Dans le trimestre'), ('ahead', 'En amon de phase')], default='month', string="Maturité de l'opportunité")
 	date_deadline = fields.Date(string="Date de fin de l'opportunité")
