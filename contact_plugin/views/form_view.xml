@@ -15,7 +15,7 @@
 
 			<page name="sales_purchases" position="after">
 				<page name="SI" string="Système d'information" attrs="{'invisible': [('is_company','=', False)]}">
-					<group name="global_group">
+					<!-- group name="global_group">
 							<group name="group_left" colspan="2" rowspan="2">
 								<group name="group_2left_server" string="Serveur">
 									<field name="m_server_brand"/>
@@ -39,7 +39,7 @@
 									<field name="m_stockage_birthday"/>
 								</group>
 							</group>
-						</group>
+						</group -->
 				</page>
 			</page>
 

@@ -17,7 +17,7 @@ class ContactPlugin(models.Model):
 	customer = fields.Boolean(compute='_detect_customer', store=True)
 
 	#IS components
-	m_server_brand = fields.Char(string="Marque")
+	"""m_server_brand = fields.Char(string="Marque")
 	m_server_volume = fields.Integer(string="Volume")
 	m_server_birthday = fields.Date(string="Date d'anniversaire")
 
@@ -30,7 +30,7 @@ class ContactPlugin(models.Model):
 
 	m_stockage_brand = fields.Char(string="Marque")
 	m_stockage_volume = fields.Integer(string="Volume")
-	m_stockage_birthday = fields.Date(string="Date d'anniversaire")
+	m_stockage_birthday = fields.Date(string="Date d'anniversaire")"""
 
 	@api.depends('company_type')
 	def _detect_customer(self):
