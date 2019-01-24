@@ -17,10 +17,10 @@
 			</field>
 
 			<field name="date_deadline" position="replace">
-				<group name="unnom" string="Echeances">
+				<!-- group name="unnom" string="Echeances" -->
 					<field name="m_maturity"/>
 					<field name="date_deadline"/>
-				</group>
+				<!-- /group -->
 			</field>
 
 			<field name="priority" position="replace"/>
