@@ -29,14 +29,13 @@
 			</field>
 		</record>
 
-		<!-- CRM TAG FORM VIEW -->
+		<!-- CRM TAG FORM VIEW - ->
 		<record id="view_crm_tag_form_inherited" model="ir.ui.view">
 			<field name="name">CRM Tag Form Extension</field>
 			<field name="model">crm.lead.tag</field>
 			<field name="inherit_id" ref="crm.crm_lead_tag_form"/>
 			<field name="arch" type="xml">
 
-				<!-- match and extend form element here -->
 				<field name="name" position="after">
 					<field name="m_type" required="1" widget="radio" options="{'horizontal': true}"/>
 				</field>
@@ -44,19 +43,18 @@
 			</field>
 		</record>
 
-		<!-- CRM TAG LIST VIEW -->
+		<!- - CRM TAG LIST VIEW - ->
 		<record id="view_crm_tag_list_inherited" model="ir.ui.view">
 			<field name="name">CRM Tag List Extension</field>
 			<field name="model">crm.lead.tag</field>
 			<field name="inherit_id" ref="crm.crm_lead_tag_tree"/>
 			<field name="arch" type="xml">
 
-				<!-- match and extend form element here -->
 				<field name="name" position="after">
 					<field name="m_type"/>
 				</field>
 
 			</field>
-		</record>
+		</record -->
 	</data>
 </odoo>
