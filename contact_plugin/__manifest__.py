@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+{
+    'name': "Contact Plugin",
+
+    'summary': """Add fields to contact""",
+
+    'description': """This module adds some fields to the Contact module and an Information System section""",
+
+    'author': "AtomX System",
+
+    'website': "http://atomxsystem.eu",
+
+    'category': 'Tools',
+
+    'version': '0.1',
+
+    # any module necessary for this one to work correctly
+    'depends': ['contacts'],
+
+    # always loaded
+    'data': [
+    	'security/ir.model.access.csv',
+        'views/form_view.xml',
+    ],
+    'installable': True,
+    'auto_install': False,
+}
