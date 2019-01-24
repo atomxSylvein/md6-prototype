@@ -10,7 +10,6 @@
 			<!-- match and extend form element here -->
 			<field name="vat" position="after">
 				<field name="m_prospect_type" attrs="{'invisible': [('is_company','=', False)]}"/>
-				<field name="m_SI" attrs="{'invisible': [('is_company','=', False)]}"/>
 			</field>
 
 			<page name="sales_purchases" position="after">
