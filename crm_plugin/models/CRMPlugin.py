@@ -20,8 +20,6 @@ class CRMPlugin(models.Model):
 
 	#new fields
 	m_type = fields.Selection([('distribution','Distribution'), ('project','Projet')], default='distribution', string="Type d'opportunité")
-	m_company = fields.Many2one(related="partner_id")
-	m_company_name = fields.Char(related="partner_id.name")
 	m_contact = fields.Many2one('res.partner', string="Contact de la société")
 	m_lead_provider = fields.Many2one('res.partner', string="Fournisseur du lead")
 	m_maturity = fields.Selection([('month', 'Dans le mois'), ('quarter', 'Dans le trimestre'), ('ahead', 'En amon de phase')], default='month', string="Maturité de l'opportunité")
