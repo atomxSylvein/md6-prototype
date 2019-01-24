@@ -77,11 +77,11 @@
                                 </group>
 
                                 <group name="tarification_group" string="Tarification">
-                                    <field name="m_buy" attrs="{'invisible':[('m_type',=,'project')]}"/>
-                                    <field name="m_sell" attrs="{'invisible':[('m_type',=,'project')]}"/>
-                                    <field name="m_margin" attrs="{'invisible':[('m_type',=,'project')]}"/>
-                                    <field name="m_tjm" attrs="{'invisible':[('m_type',=,'distribution')]}"/>
-                                    <field name="m_package_price" attrs="{'invisible':[('m_type',=,'distribution')]}"/>
+                                    <field name="m_buy" attrs="{'invisible':[('m_type', '=', 'project')]}"/>
+                                    <field name="m_sell" attrs="{'invisible':[('m_type', '=', 'project')]}"/>
+                                    <field name="m_margin" attrs="{'invisible':[('m_type', '=', 'project')]}"/>
+                                    <field name="m_tjm" attrs="{'invisible':[('m_type', '=', 'distribution')]}"/>
+                                    <field name="m_package_price" attrs="{'invisible':[('m_type', '=', 'distribution')]}"/>
                                 </group>
 
                                 <group name="manager_group" invisible="1">
@@ -100,7 +100,7 @@
                             <group name="description_group" string="Description de l'opportunité" colspan="1">
                                 <field name="description" nolabel="1"/>
                             </group>
-                            
+
                             <notebook colspan="4" invisible="1">
                             <page name="lead" string="Information">
                                 <group>
