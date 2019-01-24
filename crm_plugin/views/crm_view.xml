@@ -68,7 +68,7 @@
                                     <field name="is_blacklisted" invisible="1"/>
                                     <field name="partner_is_blacklisted" invisible="1"/>
                                     <field name="partner_address_email" widget="email"/>
-                                    <field name="partner_address_phone" attrs="{'invisible': [('partner_address_phone', '==', False)]}" widget="phone"/>
+                                    <field name="partner_address_phone" widget="phone"/>
                                 </group>
 
                                 <group name="proposition_group" string="Proposition">
