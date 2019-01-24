@@ -13,6 +13,12 @@
 				<field name="m_SI" attrs="{'invisible': [('is_company','=', False)]}"/>
 			</field>
 
+			<page name="sales_purchases" position="after">
+				<page name="SI" string="Système d'information" attrs="{'invisible': [('is_company','=', False)]}">
+					
+				</page>
+			</page>
+
 			</field>
 		</record>
 
