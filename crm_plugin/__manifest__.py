@@ -19,8 +19,8 @@
 
     # always loaded
     'data': [
-        #'views/form_view.xml',
-        'views/kanban_view.xml',
+        'views/crm_view.xml',
+        'views/tag_view.xml',
     ],
     'installable': True,
     'auto_install': False,
