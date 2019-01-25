@@ -12,7 +12,7 @@
 				<field name="m_prospect_type" attrs="{'invisible': [('is_company','=', False)]}"/>
 			</field>
 
-			<page string="Contacts &amp; Addresses" position="after">
+			<page name="internal_notes" position="before">
 				<page name="SI" string="Système d'information" attrs="{'invisible': [('is_company','=', False)]}">
 					<group name="global_group">
 							<group name="group_left" colspan="2" rowspan="2">
