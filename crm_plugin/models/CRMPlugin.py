@@ -32,4 +32,4 @@ class CRMPlugin(models.Model):
 	m_margin = fields.Monetary(string="Marge", currency_field='company_currency', readonly=True)
 	m_tjm = fields.Monetary(string="TJM", currency_field='company_currency')
 	m_package_price = fields.Monetary(string="Prix forfait", currency_field='company_currency')
-	
+	m_probability = fields.Float(related='stage_id.probability', string="Probabilité", readonly=True)

@@ -168,7 +168,14 @@
                 <attribute name="group_create">false</attribute>
             </kanban>
             
-            <progressbar position="replace"/>
+            <field name="activity_state" position="after">
+                <field name="m_probability"/>
+            </field>
+
+            <progressbar position="replace">
+                <progressbar field="m_probability" colors="{&quot;success&quot;}" min_field="planned_revenue" help="This bar allows to filter the opportunities based on probability of the opportunities"/>
+            </progressbar>
+
             <field name="tag_ids" position="attributes">
                 <attribute name="widget"></attribute>
             </field>
