@@ -19,7 +19,6 @@
 
     # always loaded
     'data': [
-    	'security/ir.model.access.csv',
         'views/form_view.xml',
     ],
     'installable': True,
